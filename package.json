@@ -1,0 +1,8 @@
+{
+  "name": "mongo-aggregate-builder",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}
