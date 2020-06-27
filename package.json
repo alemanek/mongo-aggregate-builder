@@ -2,7 +2,15 @@
   "name": "mongo-aggregate-builder",
   "version": "0.0.1",
   "dependencies": {},
+  "repository": {
+    "url": "https://github.com/alemanek/mongo-aggregate-builder.git"
+  },
   "devDependencies": {
+    "jest": "^26.1.0",
     "typescript": "^3.9.5"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": false
   }
 }
