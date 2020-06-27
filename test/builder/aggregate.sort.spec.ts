@@ -1,7 +1,4 @@
-import { AggregatePipeline } from '../../src';
-import { MetaEnum } from '../../src/builder/enums/meta.enum';
-import { SortEnum } from '../../src/builder/enums/sort.enum';
-import { Meta } from '../../src/builder/meta';
+import { AggregatePipeline, Meta, MetaEnum, SortEnum } from '../../src';
 import { IMatchTest1 } from './interfaces/match.spec.interface1';
 
 describe('Aggregate - Sort', () => {
@@ -26,6 +23,6 @@ describe('Aggregate - Sort', () => {
       }
     };
 
-    expect(aggregatePipeline.getPipeline()).toEqual([expectedDocument])
-  })
-})
+    expect(aggregatePipeline.getPipeline()).toEqual([expectedDocument]);
+  });
+});

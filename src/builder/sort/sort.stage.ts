@@ -1,7 +1,7 @@
-import { objToDotNotation } from './functions/objToDotNotation';
-import { IStage } from './interfaces/stage.interface';
-import { Meta } from './meta';
-import { TSort } from './types/sort.type';
+import { Meta } from '../..';
+import { objToDotNotation } from '../functions/objToDotNotation';
+import { IStage } from '../stage.interface';
+import { TSort } from './sort.type';
 
 /**
  * Mongo aggregates sort stage.

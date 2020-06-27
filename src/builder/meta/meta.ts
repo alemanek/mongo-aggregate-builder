@@ -1,4 +1,4 @@
-import { MetaEnum } from './enums/meta.enum';
+import { MetaEnum } from './meta.enum';
 
 /**
  * Meta object which can be used in a few different aggregation stages to provide for "textScore" in full text queries.

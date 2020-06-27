@@ -1,6 +1,6 @@
-import { objToDotNotation } from './functions/objToDotNotation';
-import { IStage } from './interfaces/stage.interface';
-import { TMatch } from './types/match.type';
+import { objToDotNotation } from '../functions/objToDotNotation';
+import { IStage } from '../stage.interface';
+import { TMatch } from './match.type';
 
 /**
  * Abstraction for the $match aggregation query stage

@@ -1,4 +1,4 @@
-import { TAggExp } from './aggExp.type';
+import { TAggExp } from '../types/aggExp.type';
 
 export type TMatch<T extends TAggExp> = {
   /**

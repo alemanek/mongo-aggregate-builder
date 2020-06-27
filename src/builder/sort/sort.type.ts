@@ -1,4 +1,4 @@
-import { Meta } from '../meta';
+import { Meta } from '../..';
 
 /**
  * Type of the sort object.

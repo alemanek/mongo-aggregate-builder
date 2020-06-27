@@ -1,8 +1,8 @@
-import { IStage } from './interfaces/stage.interface';
-import { MatchStage } from './match.stage';
-import { SortStage } from './sort.stage';
-import { TMatch } from './types/match.type';
-import { TSort } from './types/sort.type';
+import { MatchStage } from './match/match.stage';
+import { TMatch } from './match/match.type';
+import { SortStage } from './sort/sort.stage';
+import { TSort } from './sort/sort.type';
+import { IStage } from './stage.interface';
 
 /**
  * Represents a set of generic aggregate pipeline expressions.  Order is preserved.
