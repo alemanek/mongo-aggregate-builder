@@ -5,6 +5,9 @@
 .idea/shelf/
 .idea/dictionaries/
 
+# ignoring output directories
+lib/
+
 ########### Git Hub Defaults for Node JS ###############
 # Logs
 logs
@@ -110,3 +113,4 @@ dist
 
 # TernJS port file
 .tern-port
+/lib/
