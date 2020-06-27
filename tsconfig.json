@@ -1,17 +1,29 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "ES2020",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    "declaration": true,
+    "removeComments": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2018",
+    "sourceMap": true,
     "strict": true,
-    "outDir": "./lib/",
-    "sourceMap": true
+    "outDir": "./lib",
+    "baseUrl": "./",
+    "skipLibCheck": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "typedocOptions": {
+    "name": "Utility Function Library",
+    "mode": "file",
+    "out": "doc",
+    "theme": "default",
+    "ignoreCompilerErrors": "false",
+    "preserveConstEnums": "true",
+    "exclude": "*.spec.ts",
+    "stripInternal": "false",
+    "inputFiles": ["./src"],
+    "externalPattern": "./node_modules",
+    "target": "ES6"
+  },
+  "exclude": ["node_modules", "lib", "**/*spec.ts", "test"]
 }

@@ -1,16 +1,59 @@
 {
   "name": "mongo-aggregate-builder",
   "version": "0.0.1",
-  "dependencies": {},
   "repository": {
     "url": "https://github.com/alemanek/mongo-aggregate-builder.git"
   },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build-docs": "npx typedoc --out docs src",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "deploy": "rm -rf lib && npm run lint && npm run build && npm run test && npm run build-docs && npm publish"
+  },
+  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^10.14.4",
+    "nodemon": "^1.18.11",
+    "prettier": "^1.16.4",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.15.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.16.6",
+    "@types/jest": "^26.0.3",
     "jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
     "typescript": "^3.9.5"
   },
   "jest": {
-    "verbose": true,
-    "collectCoverage": false
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false
+      }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/{!(mock|spec),}.ts"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
   }
 }
