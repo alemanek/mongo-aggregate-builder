@@ -1,6 +1,6 @@
+import { objToDotNotation } from './functions/objToDotNotation';
 import { IStage } from './interfaces/stage.interface';
 import { TMatch } from './types/match.type';
-import { objNotationToDot } from './util';
 
 /**
  * Abstraction for the $match aggregation query stage
@@ -17,6 +17,6 @@ export class MatchStage<T> implements IStage {
    * @param matchQuery for this stage.
    */
   constructor(matchQuery: TMatch<T>) {
-    this.$match = objNotationToDot(matchQuery);
+    this.$match = objToDotNotation([])(matchQuery);
   }
 }
