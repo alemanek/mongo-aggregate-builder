@@ -1,0 +1,9 @@
+export { IStage } from './builder/stage.interface';
+export { AggregatePipeline } from './builder/aggregate.pipeline';
+export { MetaEnum } from './builder/meta/meta.enum';
+export { Meta } from './builder/meta/meta';
+export { TSort } from './builder/sort/sort.type';
+export { SortEnum } from './builder/sort/sort.enum';
+export { SortStage } from './builder/sort/sort.stage';
+export { TMatch } from './builder/match/match.type';
+export { MatchStage } from './builder/match/match.stage';
