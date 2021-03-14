@@ -1,6 +1,7 @@
 {
   "name": "mongo-aggregate-builder",
   "version": "0.0.1",
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/alemanek/mongo-aggregate-builder.git"
   },
@@ -9,8 +10,8 @@
   ],
   "scripts": {
     "build-docs": "npx typedoc --out docs src",
-    "build": "npm run lint && npm run test && tsc -p tsconfig.build.json",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "npm run format && npm run lint && npm run test && tsc -p tsconfig.build.json",
+    "format": "prettier --config .prettierrc src/**/*.ts --write",
     "lint": "eslint . --ext .ts",
     "test": "jest",
     "test:watch": "jest --watch",
