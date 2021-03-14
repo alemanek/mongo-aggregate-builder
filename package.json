@@ -19,7 +19,6 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "deploy": "rm -rf lib && npm run lint && npm run build && npm run test && npm run build-docs && npm publish"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.3",
     "@types/node": "^10.14.4",
