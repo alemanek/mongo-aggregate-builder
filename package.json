@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build-docs": "npx typedoc --out docs src",
-    "build": "npm run format && npm run lint && npm run test && tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json",
     "format": "prettier --config .prettierrc src/**/*.ts --write",
     "lint": "eslint . --ext .ts",
     "test": "jest",

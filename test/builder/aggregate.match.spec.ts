@@ -26,4 +26,25 @@ describe('Aggregate - Match', () => {
 
     expect(aggregatePipeline.getPipeline()).toEqual([expectedDocument])
   })
+
+  it('Testing out range operators $gt, $gte', () => {
+    const aggregatePipeline = new AggregatePipeline()
+      .match<IMatchTest1>({
+        firstName: 'test',
+        address: {
+          street: 'test',
+          zip: { $gt: 55, $lt: 77 },
+        }
+      });
+
+    const expectedDocument = {
+      $match: {
+        'firstName': 'test',
+        'address.street': 'test',
+        'address.zip': { $gt: 55, $lt: 77 }
+      }
+    };
+
+    expect(aggregatePipeline.getPipeline()).toEqual([expectedDocument])
+  })
 })
