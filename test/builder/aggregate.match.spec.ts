@@ -7,13 +7,14 @@ describe('Aggregate - Match', () => {
   });
 
   it('Simple value match with sub-document', () => {
-    const aggregatePipeline = new AggregatePipeline().match<IMatchTest1>({
-      firstName: 'test',
-      address: {
-        street: 'test',
-        zip: 55
-      }
-    });
+    const aggregatePipeline = new AggregatePipeline()
+      .match<IMatchTest1>({
+        firstName: 'test',
+        address: {
+          street: 'test',
+          zip: 55
+        }
+      });
 
     const expectedDocument = {
       $match: {
