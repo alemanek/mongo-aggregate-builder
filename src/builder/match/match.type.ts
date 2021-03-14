@@ -7,5 +7,5 @@ export type TMatch<T extends TAggExp> = {
    * NOTE:  Current limitations are that it will allow for value matching or expression operator objects
    *         but no strict checks are placed on the operator objects yet.
    */
-  readonly [P in keyof T]?: T[P] extends object ? TMatch<T[P]> : T[P] | object;
+  readonly [P in keyof T]?: T[P] extends Record<string, unknown> ? TMatch<T[P]> : T[P] | Record<string, unknown>;
 }

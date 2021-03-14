@@ -10,7 +10,7 @@ export class SortStage<T> implements IStage {
   /**
    * The $sort object.  This needs to be type any as it is normalized to dot notation.
    */
-  public readonly $sort: any;
+  public readonly $sort: Record<string, unknown>;
 
   /**
    * Construct a sort stage.
