@@ -1,7 +1,7 @@
 export interface IStage {
-  $match?: any;
-  $sort?: any;
+  $match?: Record<string, unknown>;
+  $sort?: Record<string, unknown>;
   $limit?: number;
   $skip?: number;
-  $group?: any;
+  $group?: Record<string, unknown>;
 }

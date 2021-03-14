@@ -1,4 +1,4 @@
-import { Meta } from '../..';
+import { Meta, SortEnum } from '../..';
 
 /**
  * Type of the sort object.
@@ -6,8 +6,7 @@ import { Meta } from '../..';
 export type TSort<T> = {
   /**
    * If it is an object type recursively build up more TSort types.  It is it a primitive type
-   * constrain the value to -1, 1, or the Meta object.  Strangely enough this constraint didn't work
-   * with just using SortEnum.
+   * constrain the value to -1, 1, or the Meta object.
    */
-  readonly [P in keyof T]?: T[P] extends object ? TSort<T[P]> : -1 | 1 | Meta;
+  readonly [P in keyof T]?: T[P] extends Record<string, unknown> ? TSort<T[P]> : SortEnum.Descending | SortEnum.Ascending | Meta;
 }

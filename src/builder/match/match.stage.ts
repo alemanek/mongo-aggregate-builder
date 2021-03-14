@@ -10,7 +10,7 @@ export class MatchStage<T> implements IStage {
   /**
    * Since we normalize this to dot notation we need to use the "any" type.
    */
-  public readonly $match: any;
+  public readonly $match: Record<string, unknown>;
 
   /**
    * Build the match stage with the query provided.

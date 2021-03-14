@@ -1,3 +1,3 @@
 export type TAggExp = {
-  $or?: object[];
+  $or?: Record<string, unknown>[];
 }
