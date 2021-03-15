@@ -6,5 +6,5 @@ export type TMatch<T> = {
    *   - If it is of type number then it can accept a number value or an object matching one of the defined number expressions.
    *   - Otherwise it can accept the primitive type. (for now this will be expanded for the rest of the possible match expressions later.)
    */
-  readonly [P in keyof T]?: T[P] extends Record<string, unknown> ? TMatch<T[P]> : T[P] extends number ? TMatchNumberExp | T[P] : T[P];
+  [P in keyof T]?: T[P] extends Record<string, unknown> ? TMatch<T[P]> : T[P] extends number ? TMatchNumberExp | T[P] : T[P];
 }

@@ -12,7 +12,8 @@ describe('Aggregate - Match', () => {
         firstName: 'test',
         address: {
           street: 'test',
-          zip: 55
+          zip: 55,
+          
         }
       });
 
