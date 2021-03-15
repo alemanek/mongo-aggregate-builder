@@ -1,4 +1,4 @@
-import { isExcludedFromConversion } from '../excludeFromConversion.func';
+import { isExcludedFromTransform } from './transformExclude.func';
 
 /**
  * Converts an object from json object notation to json dot notation.
@@ -26,7 +26,7 @@ export function objToDotNotation(obj: Record<string, unknown>, prefix = '', resu
     const newKey = prefix !== '' ? `${prefix}.${key}` : key;
 
     // Its a non-null object.
-    if (value != null && typeof value === 'object' && !isExcludedFromConversion(value)) {
+    if (value != null && typeof value === 'object' && !isExcludedFromTransform(value)) {
       // Iterate through its keys passing in our current result object.
       objToDotNotation(value, newKey, result);
     } else {

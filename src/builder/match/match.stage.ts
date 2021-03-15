@@ -1,5 +1,5 @@
-import { objToDotNotation } from '../functions/objToDotNotation.func';
 import { IStage } from '../stage.interface';
+import { objToDotNotation } from '../transformer/objToDotNotation.func';
 import { TMatch } from './match.type';
 
 /**
