@@ -11,9 +11,9 @@ describe('Aggregate - Sort', () => {
       firstName: new Meta(MetaEnum.TextScore),
       address: {
         street: SortEnum.Descending,
-        zip: SortEnum.Ascending,
+        zip: SortEnum.Ascending
       }
-    });
+    })
 
     const expectedDocument = {
       $sort: {
