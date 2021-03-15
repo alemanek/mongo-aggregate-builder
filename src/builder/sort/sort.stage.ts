@@ -1,6 +1,5 @@
-import { Meta } from '../..';
-import { objToDotNotation } from '../functions/objToDotNotation';
 import { IStage } from '../stage.interface';
+import { objToDotNotation } from '../transformer/objToDotNotation.func';
 import { TSort } from './sort.type';
 
 /**
@@ -12,11 +11,11 @@ export class SortStage<T> implements IStage {
    */
   public readonly $sort: Record<string, unknown>;
 
-  /**
+  /**npm 
    * Construct a sort stage.
    * @param sortQuery
    */
   constructor(sortQuery: TSort<T>) {
-    this.$sort = objToDotNotation([Meta.name])(sortQuery);
+    this.$sort = objToDotNotation(sortQuery);
   }
 }
