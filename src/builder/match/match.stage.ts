@@ -1,5 +1,5 @@
-import { objToDotNotation } from '../functions/objToDotNotation';
 import { IStage } from '../stage.interface';
+import { objToDotNotation } from '../transformer/objToDotNotation.func';
 import { TMatch } from './match.type';
 
 /**
@@ -17,6 +17,6 @@ export class MatchStage<T> implements IStage {
    * @param matchQuery for this stage.
    */
   constructor(matchQuery: TMatch<T>) {
-    this.$match = objToDotNotation([])(matchQuery);
+    this.$match = objToDotNotation(matchQuery);
   }
 }

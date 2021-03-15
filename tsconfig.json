@@ -21,9 +21,16 @@
     "preserveConstEnums": "true",
     "exclude": "*.spec.ts",
     "stripInternal": "false",
-    "inputFiles": ["./src"],
+    "inputFiles": [
+      "./src"
+    ],
     "externalPattern": "./node_modules",
     "target": "ES6"
   },
-  "exclude": ["node_modules", "lib", "**/*spec.ts", "test"]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "**/*spec.ts",
+    "test"
+  ]
 }
